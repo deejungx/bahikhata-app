@@ -13,11 +13,11 @@
 {# Render a form field's errors. #}
 {%- macro field_errors(f) -%}
   {% if f.errors %}
-    <ul class="list-unstyled text-danger field-error">
       {% for error in f.errors %}
-          <li>{{ error | e }}</li>
+        <div class="alert alert-danger" role="alert">
+          <span>{{ error | e }}</span>
+        </div>
       {% endfor %}
-    </ul>
   {% endif %}
 {%- endmacro -%}
 
@@ -45,7 +45,6 @@
     {{ checkbox_field(f, **kwargs) }}
   {% else %}
       <div class="form-group {{ css_class }}">
-    {{ field_label(f) }}
     {{ field(f, **kwargs) }}
   {% endif %}
 

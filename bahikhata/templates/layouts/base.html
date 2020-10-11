@@ -2,50 +2,75 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description"
-          content="{% block meta_description %}{% endblock %}">
+    <meta name="description" content="{% block meta_description %}{% endblock %}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Features-Clean.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Footer-Clean.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Header-Blue.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Highlight-Clean.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Login-Form-Clean.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Navigation-with-Button.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Registration-Form-with-Photo.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/vendor/font-awesome.min.css') }}">
+    <script src="https://code.jquery.com/jquery-1.12.2.min.js" integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk=" crossorigin="anonymous"></script>
+</head>
 
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='styles/vendor/bootstrap.min.css') }}">
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='styles/main.css') }}">
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='styles/vendor/font-awesome.min.css') }}">
-    <script src="https://code.jquery.com/jquery-1.12.2.min.js"
-            integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk="
-            crossorigin="anonymous"></script>
-  </head>
   <body>
     {% block header %}{% endblock %}
-    
-    <main class="container">
+
       {{ flash.render() }}
 
-      <div class="md-margin-top">{% block heading %}{% endblock %}</div>
       {% block body %}{% endblock %}
-    </main>
 
-    <footer class="footer text-center">
-      <div class="container">
-        <ul class="list-inline">
-          <li class="text-muted">Snake Eyes &copy; 2016</li>
-          {% block footer %}{% endblock %}
-        </ul>
-      </div>
-    </footer>
 
-    <script
-      src="{{ url_for('static', filename='scripts/vendor/bootstrap.min.js') }}">
-    </script>
+
+    <div class="footer-clean">
+      <footer>
+          <div class="container">
+              <div class="row justify-content-center">
+                  <div class="col-sm-4 col-md-3 item">
+                      <h3>Services</h3>
+                      <ul>
+                          <li><a href="#">Web design</a></li>
+                          <li><a href="#">Development</a></li>
+                          <li><a href="#">Hosting</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-sm-4 col-md-3 item">
+                      <h3>About</h3>
+                      <ul>
+                        {% block footer %}{% endblock %}
+                      </ul>
+                  </div>
+                  <div class="col-sm-4 col-md-3 item">
+                      <h3>Careers</h3>
+                      <ul>
+                          <li><a href="#">Job openings</a></li>
+                          <li><a href="#">Employee success</a></li>
+                          <li><a href="#">Benefits</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                      <p class="copyright">Company Name © 2017</p>
+                  </div>
+              </div>
+          </div>
+      </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
   </body>
 </html>

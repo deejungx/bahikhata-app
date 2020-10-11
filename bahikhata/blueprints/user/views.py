@@ -53,9 +53,9 @@ def login():
 
                 return redirect(url_for('user.settings'))
             else:
-                flash('This account has been disabled.', 'error')
+                flash('This account has been disabled.', 'danger')
         else:
-            flash('Identity or password is incorrect.', 'error')
+            flash('Identity or password is incorrect.', 'danger')
 
     return render_template('user/login.html', form=form)
 

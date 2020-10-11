@@ -2,13 +2,19 @@
 {%- macro render() -%}
   {% with messages = get_flashed_messages(with_categories=True) %}
     {% if messages %}
-      <div id="flash-messages" class="row sm-margin-top">
+    <div class="container">
         {% for category, msg in messages %}
-          <div class="alert alert-{{ category }}" role="alert">
-            {{ msg }}
+          <div class="alert alert-{{ category }} alert-dismissable fade show" role="alert">
+            <button class="close" type="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+            <span>{{ msg }}</span>
           </div>
         {% endfor %}
       </div>
     {% endif %}
   {% endwith %}
 {%- endmacro -%}
+
+
+  

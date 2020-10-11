@@ -1,42 +1,62 @@
 {% extends 'layouts/app.html' %}
 
-{% block title %}Test your luck against the roll of the dice{% endblock %}
-{% block meta_description %}Compete against yourself and others by guessing the
-outcome of a dice roll. Win points and dominate the leaderboard.{% endblock %}
+{% block title %}Khata Lab{% endblock %}
+{% block meta_description %}Complete business accounting and finance solution{% endblock %}
 
 {% block body %}
-  <div class="container sm-margin-top">
-    <div class="row text-center lg-margin-bottom">
-      <h1>Feeling lucky?</h1>
-      <h3 class="text-muted">
-        Test your luck against the roll of the dice and win today
-      </h3>
+  <main role="main">
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Heading text</h1>
+            <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+            <p><a class="btn btn-primary" role="button" style="color: #f2f5f8;" href="{{ url_for('user.signup') }}">Register Now</a></p>
+        </div>
     </div>
-    <div class="row text-center">
-      <div class="col-lg-4">
-        <i class="fa fa-fw fa-4x fa-bullhorn text-primary"></i>
-        <h2>Place bets</h2>
-        <p class="text-muted">Correctly guess the dice's roll.</p>
-        <p>
-          <a href="{{ url_for('user.signup') }}" class="btn btn-default">Sign up</a>
-        </p>
+  </main>
+
+  <div class="features-clean">
+      <div class="container">
+          <div class="intro">
+              <h2 class="text-center">Features</h2>
+              <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
+          </div>
+          <div class="row features">
+              <div class="col-sm-6 col-lg-4 item"><i class="fa fa-map-marker icon"></i>
+                  <h3 class="name">Works everywhere</h3>
+                  <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
+              </div>
+              <div class="col-sm-6 col-lg-4 item"><i class="fa fa-clock-o icon"></i>
+                  <h3 class="name">Always available</h3>
+                  <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
+              </div>
+              <div class="col-sm-6 col-lg-4 item"><i class="fa fa-list-alt icon"></i>
+                  <h3 class="name">Customizable</h3>
+                  <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
+              </div>
+              <div class="col-sm-6 col-lg-4 item"><i class="fa fa-leaf icon"></i>
+                  <h3 class="name">Organic</h3>
+                  <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
+              </div>
+              <div class="col-sm-6 col-lg-4 item"><i class="fa fa-plane icon"></i>
+                  <h3 class="name">Fast</h3>
+                  <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
+              </div>
+              <div class="col-sm-6 col-lg-4 item"><i class="fa fa-phone icon"></i>
+                  <h3 class="name">Mobile-first</h3>
+                  <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
+              </div>
+          </div>
       </div>
-      <div class="col-lg-4">
-        <i class="fa fa-fw fa-4x fa-database text-primary"></i>
-        <h2>Win currency</h2>
-        <p class="text-muted">Gain coins if your guess is correct.</p>
-        <p>
-          <a href="{{ url_for('user.signup') }}" class="btn btn-default">Sign up</a>
-        </p>
-      </div>
-      <div class="col-lg-4">
-        <i class="fa fa-fw fa-4x fa-trophy text-primary"></i>
-        <h2>Leaderboard</h2>
-        <p class="text-muted">Compare your results to others.</p>
-        <p>
-          <a href="{{ url_for('user.signup') }}" class="btn btn-default">Sign up</a>
-        </p>
-      </div>
-    </div>
   </div>
+
+  <div class="highlight-clean">
+      <div class="container">
+          <div class="intro">
+              <h2 class="text-center">Highlight</h2>
+              <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
+          </div>
+          <div class="buttons"><a class="btn btn-primary" role="button" href="#" style="background: #235789;">Primary</a></div>
+      </div>
+  </div>
+
 {% endblock %}

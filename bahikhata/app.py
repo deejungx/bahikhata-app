@@ -96,6 +96,8 @@ def authentication(app, user_model):
     :return: None
     """
     login_manager.login_view = 'user.login'
+    login_manager.login_message_category = 'info'
+    login_manager.login_message = 'You must be logged in first.'
 
     @login_manager.user_loader
     def load_user(uid):
